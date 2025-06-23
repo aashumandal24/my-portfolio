@@ -1,0 +1,467 @@
+/* Footer Styles */
+.footer {
+  background: var(--color-light);
+  border-top: 1px solid #f3f4f6;
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Main Footer Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Brand Section */
+.footer-brand {
+  animation: slideInLeft 0.8s ease-out 0.2s both;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-logo {
+  margin-bottom: 20px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(150deg, #2072f6, var(--color-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.logo-text::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(175deg, #00b5fc, var(--color-primary));
+  transition: width 0.3s ease;
+}
+
+.logo-text:hover::after {
+  width: 100%;
+}
+
+.brand-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  max-width: 300px;
+}
+
+/* Footer Links */
+.footer-links {
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
+.links-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.links-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(135deg, #a1c5ffe8, var(--color-primary));
+  border-radius: 1px;
+}
+
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links-list li {
+  margin-bottom: 12px;
+  animation: slideInRight 0.6s ease-out var(--delay, 0s) both;
+}
+
+.footer-link {
+  color: #6b7280;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.footer-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(135deg, #3b82f6, #10b981);
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+/* Footer Contact */
+.footer-contact {
+  animation: slideInRight 0.8s ease-out 0.6s both;
+}
+
+.fcontact-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.fcontact-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(135deg, #a1c5ffe8, var(--color-primary));
+  border-radius: 1px;
+}
+
+.fcontact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fcontact-item {
+  color: #6b7280;
+  margin: 0;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 15px;
+}
+
+.fcontact-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3b82f6;
+  font-weight: bold;
+}
+
+.fcontact-item:hover {
+  color: #3b82f6;
+  transform: translateX(5px);
+}
+
+/* Divider */
+.footer-divider {
+  height: 1.5px;
+  background: linear-gradient(90deg, transparent, #c1d6ff, transparent);
+  margin: 40px 0 30px;
+  animation: expandWidth 1s ease-out 0.8s both;
+}
+
+/* Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out 1s both;
+}
+
+.copyright-text {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.heart-icon {
+  color: #ef4444;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.scroll-top-btn {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #4a8fffe8, var(--color-primary));
+  border: none;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-top-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.scroll-top-btn:hover::before {
+  left: 100%;
+}
+
+.scroll-top-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+.scroll-top-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.scroll-top-btn:hover svg {
+  transform: translateY(-2px);
+}
+
+/* Floating Elements */
+.floating-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: linear-gradient(135deg, #3b82f6, #079cff);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.dot-1 {
+  top: 20%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+}
+
+.dot-2 {
+  top: 60%;
+  right: 15%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.dot-3 {
+  bottom: 30%;
+  left: 20%;
+  animation: float 7s ease-in-out infinite 2s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) rotate(120deg);
+  }
+  66% {
+    transform: translateY(5px) rotate(240deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 0 20px;
+  }
+
+  .footer-content {
+    gap: 45px;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .brand-description {
+    max-width: none;
+  }
+
+  .fsocial-links {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .copyright-text {
+    justify-content: center;
+  }
+
+  .links-title::after {
+    display: none;
+  }
+
+  .fcontact-item::before {
+    display: none;
+  }
+
+  .scroll-top-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  .footer-content {
+    justify-content: space-around;
+  }
+
+  .footer-bottom {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+
+  .footer-content {
+    gap: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+  }
+
+  .copyright-text {
+    flex-direction: column;
+  }
+}
