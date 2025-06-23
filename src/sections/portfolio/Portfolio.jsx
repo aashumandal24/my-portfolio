@@ -18,7 +18,7 @@ const Portfolio = (props) => {
             image: Frontend1,
             category: "Frontend",
             demoLink: "#",
-            githubLink: "#",
+            githubLink: "https://github.com/aashumandal24/my-portfolio",
         },
         {
             id: 2,
